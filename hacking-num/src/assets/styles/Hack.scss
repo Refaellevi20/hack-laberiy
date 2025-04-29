@@ -1,0 +1,55 @@
+.hacker-container {
+  background-color: #000;
+  min-height: 150px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+
+  .number-display {
+    color: #00ff00;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    .current-number {
+      color: #ff0000;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  }
+
+  .processing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #00ff00;
+    font-size: 14px;
+
+    .dots {
+      display: inline-block;
+      animation: loading 1s infinite;
+    }
+  }
+
+  .success-message {
+    color: #00ff00;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: blink 1s infinite;
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes loading {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
+} 
